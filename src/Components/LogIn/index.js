@@ -15,7 +15,7 @@ const googleProvider = new GoogleAuthProvider()
 
 
 const LogIn = () => {
-    const [isRegistering, setIsRegistering] = useState(true)
+    const [isRegistering, setIsRegistering] = useState(false)
 
     const submitHandler = async (e) => {
         e.preventDefault()
@@ -46,9 +46,6 @@ const LogIn = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control type="password" placeholder="Password" />
-                        </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Check me out" />
                         </Form.Group>
                     </Stack>
                     <Stack className='col-md-4 mx-auto' gap={3}>

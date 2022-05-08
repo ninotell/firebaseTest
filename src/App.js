@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
-import Home from './Components/Home/Home';
-import LogIn from './Components/LogIn/LogIn';
+import Home from './Components/Home';
+import LogIn from './Components/LogIn';
 
 import firebaseApp from './credentials';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -21,7 +21,7 @@ function App() {
     
   })
   
-  return  <>{user ? <Home/> : <LogIn/>}</>
+  return  <>{user ? <Home userEmail={user.email}/> : <LogIn/>}</>
 }
 
 export default App;
